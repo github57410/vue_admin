@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>热点新闻</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <style type="text/css">
+        body{
+          background-color: #fafafa;
+        }
+        .layui-tab-content{
+            padding: 0px !important;
+        }
+        .layui-col-md4{
+            height: 30px;
+            text-align: center;
+        }
+        .layui-tab-title .layui-this:after{
+            border: none;
+        }
+        .layui-tab-title{
+            border: none;
+        }
+        .jianjie{
+
+            width: 100%;
+            background: url("img/bacakground_img.png") no-repeat center 0;
+        }
+        .jianjie p{
+            margin-left: 5%;
+            color: #5C5C5C;
+            line-height: 25px;
+            text-align: left;
+            width: 603px;
+        }
+        .bottom_titile{
+            text-align: center;
+            height: 53px;
+            line-height: 53px;
+            color: #FFFFFF;
+            font-size: 16px;
+            background: url("img/add.png") no-repeat center 0;
+        }
+        .bottom_tips{
+            text-align: center;
+            color: #656565;
+            font-size: 14px;
+            background-color: #DEDEDE;
+            height: 18px;
+            line-height: 18px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        .tab_02_dv_01{
+            width: 250px;
+            height: 350px;
+            background-color: white;
+            margin-top: 6%;
+        }
+
+        .tab_02_tips{
+            background-color: #478ADB;color:white;width: 40%;margin-top: 4%
+        }
+
+        .layui-tab{
+            margin: 0;
+        }
+        .layui-row{
+            height: 45px;
+            line-height: 45px;
+        }
+        .tab_02_dv_01 p{
+            height: 20px;
+            line-height: 20px;
+            margin-left: 1.8em;
+        }
+        .tab_02_dv_01_img img{
+            padding: 10px 10px 0px 10px;
+            height: 90%;
+            width: 92%;
+        }
+        .img_titie>div{
+            width: 110px;
+            margin: auto 0;
+        }
+        .layui-layer-content{
+            text-align: center;
+            border-radius: 5px !important;
+        }
+        .layui-tab-title .layui-this{
+            background-color: #478ADB;
+            color: white;
+        }
+        .tab_02_tips img{
+             height: 15px;
+            width: 15px;
+            margin-left: 5px;
+            margin-top: -2px;
+        }
+        .layui-textarea{
+            min-height: 55px;
+            width: 75% !important;
+        }
+
+    </style>
+</head>
+<body>
+<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief" style="width: 100%">
+    <div class="layui-row">
+        <div class="layui-col-md4">
+            <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1337323677,3879538407&fm=26&gp=0.jpg" height="30" width="130"/>
+        </div>
+        <div class="layui-col-md4">
+            <ul class="layui-tab-title">
+                <li class="layui-this">历史今日</li>
+                <li>时政要闻</li>
+                <li>军情速报</li>
+            </ul>
+        </div>
+    </div>
+        <div class="layui-tab-content">
+        <div class="layui-tab-item layui-show">
+            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1585732616662&di=952b69ad8805226e9bd6a84688a1cac1&imgtype=0&src=http%3A%2F%2Fqnzs.youth.cn%2Ftsxq%2F201707%2FW020170706503993162715.jpg" height="400" width="100%"/>
+        </div>
+
+
+        <div class="layui-tab-item  ">
+            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1585732616660&di=b3f9cfd43bec2972bd328f6c7040ad40&imgtype=0&src=http%3A%2F%2Fimage8.huangye88.com%2F2015%2F05%2F10%2Fce8fd175dd9e4d6b4f91b6447781ee9e.jpg" height="400" width="100%"/>
+        </div>
+
+        <div class="layui-tab-item " style="background-color:#fafafa ">
+            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1585733205761&di=259e1d7a267c26765b0878bdebefee81&imgtype=0&src=http%3A%2F%2Fi5.3conline.com%2Fimages%2Fpiclib%2F200911%2F23%2Fbatch%2F1%2F48214%2F1258992026813rebugfa4o8.jpg" height="400" width="100%"/>
+<!--            <div style="background-color: white;width: 80%;margin-left: 10%;height: 250px;margin-top: 30px">-->
+<!--            </div>-->
+        </div>
+    </div>
+</div>
+<!--<div class="bottom_tips">-->
+<!--    Copyright©信息有限公司.保留一切权利 · 哲ICP备00000000号 · 哲ICP备0000000号-1-->
+<!--</div>-->
+</body>
+</html>
+<script src="js/jquery-3.4.1.js"></script>
+<script src="layui/layui.all.js"></script>
+<script type="text/javascript">
+    var tips=layui.tips;
+
+    function Ttips(dv) {
+       dv==0?layer.tips('扫码关注<br/><img src="img/code.jpg" width="80px" height="80px"><br/>72保保公众号', '.wx', {tips: [3,'#666666'],time:10000}):layer.tips('详情咨询<br/>15111347288<br/>(电话/微信)', '.kf', {tips: [3,'#666666']})
+    }
+    function sub() {
+        var name=$("#name").val();
+        var phone=$("#phone").val();
+        var textarea=$("#textarea").val();
+        if(name =="" || phone==""){layer.msg('姓名或电话未填写'); return;}
+        var TEL_REGEXP = /^1([38]\d|5[0-35-9]|7[3678])\d{8}$/;
+        if(!TEL_REGEXP.test(phone)){layer.msg('手机号格式错误'); return}
+        var url="https://www.72baobao.cn/api/users/message";
+        var jsonstr={name:name,phone:phone,message:textarea};
+        $.post(url,JSON.stringify(jsonstr),function (data) {
+                   if(data.code==200){
+                       layer.msg("留言成功");
+                       $("#name").val("");
+                       $("#phone").val("");
+                       $("#textarea").val("");
+                   }
+        });
+    }
+
+</script>
